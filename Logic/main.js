@@ -65,7 +65,6 @@ function getIsMouseInShape(x, y, shape) {
 function drawShapes() {
     context.clearRect(0, 0, canvas_width, canvas_height);
     for (let shape of shapes) {
-
             context.beginPath();
             context.arc(shape.x, shape.y, shape.radius, 2 * Math.PI, 0, false);
             context.fillStyle = shape.color;
@@ -88,15 +87,17 @@ function mouseDownHandler(event) {
 
 function mouseUpHandler(event) {
     event.preventDefault();
-    if (!is_dragging)
+    if (!is_dragging){
         return;
+    }
     is_dragging = false;
 }
 
 function mouseOutHandler(event) {
     event.preventDefault();
-    if (!is_dragging)
+    if (!is_dragging){
         return;
+    }
     is_dragging = false;
 }
 
