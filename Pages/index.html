@@ -40,6 +40,7 @@
           <button style="margin-top: 30px" onclick="clickButtonHandler()">
             Reset or Create
           </button>
+          <button onclick="openModal()">Open Modal</button>
         </div>
       </div>
 
@@ -48,6 +49,13 @@
           height="500px"
           width="600px"
           style="border: 2px solid black"></canvas>
+      </div>
+      <div id="Modal" class="modal">
+        <div class="modal-content">
+          <h2 id="modalTitle"></h2>
+          <p id="modalContent"></p>
+          <button onclick="closeModal()">Close Modal</button>
+        </div>
       </div>
     </div>
     <script src="/Logic/main.js"></script>
